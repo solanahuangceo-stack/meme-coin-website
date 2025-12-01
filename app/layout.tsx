@@ -16,9 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: "$MEME — The Premium Meme Coin Experience",
+  title: "$CEO — Huangonsol Token",
   description: "Degen fintech, but premium. Internet magic money for the discerning chaotic investor.",
-  generator: "v0.app",
   icons: {
     icon: [
       {

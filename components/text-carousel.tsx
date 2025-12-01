@@ -32,7 +32,7 @@ export default function TextCarousel() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          What makes $MEME special?
+          What makes $CEO special?
         </motion.p>
 
         <div className="h-20 flex items-center justify-center">

@@ -18,7 +18,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          $MEME
+          $CEO
         </motion.div>
 
         {/* Social links */}
@@ -39,7 +39,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="text-sm text-muted-foreground mb-2">2025 $MEME. All rights reserved (lol not really).</p>
+        <p className="text-sm text-muted-foreground mb-2">{new Date().getFullYear()} $CEO. All rights reserved (lol not really).</p>
 
         <p className="text-xs text-muted-foreground/60">Made with questionable financial decisions</p>
       </div>
