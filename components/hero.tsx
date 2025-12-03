@@ -7,10 +7,6 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[85dvh] flex-col items-center justify-center overflow-hidden px-4 py-20">
       {/* Subtle background glow */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="bg-accent-purple/10 absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full blur-[120px]" />
-        <div className="bg-accent-teal/10 absolute right-1/4 bottom-1/4 h-[400px] w-[400px] rounded-full blur-[100px]" />
-      </div>
 
       {/* Main headline */}
       <motion.h1
@@ -73,10 +69,14 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.6 }}
       >
         <motion.button
-          className="from-accent-purple to-accent-teal glow-subtle rounded-xl bg-gradient-to-r px-8 py-3.5 text-base font-semibold text-white"
+          key={'buy-button'}
+          className="from-accent-purple to-accent-teal glow-subtle cursor-pointer rounded-xl bg-gradient-to-r px-8 py-3.5 text-base font-semibold text-white"
           whileHover={{ scale: 1.03, y: -2 }}
           whileTap={{ scale: 0.98 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          onClick={() => {
+            document.querySelector('#buy-ceo')?.scrollIntoView({ behavior: 'smooth' });
+          }}
         >
           Buy $CEO
         </motion.button>

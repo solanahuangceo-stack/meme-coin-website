@@ -48,7 +48,7 @@ export default function CryptoPlatforms() {
   const filteredPlatforms = activeCategory ? platforms.filter((p) => p.category === activeCategory) : platforms;
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <section id="buy-ceo" className="relative min-h-screen overflow-hidden">
       <div className="relative z-10 container mx-auto max-w-7xl px-4 py-12">
         {/* Header Section */}
         <div className="mb-12 text-center">
@@ -128,6 +128,6 @@ export default function CryptoPlatforms() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
