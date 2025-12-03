@@ -1,95 +1,95 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Hero() {
-	return (
-		<section className='relative min-h-[85dvh] flex flex-col items-center justify-center px-4 py-20 overflow-hidden'>
-			{/* Subtle background glow */}
-			<div className='absolute inset-0 overflow-hidden'>
-				<div className='absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-purple/10 rounded-full blur-[120px]' />
-				<div className='absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-accent-teal/10 rounded-full blur-[100px]' />
-			</div>
+  return (
+    <section className="relative flex min-h-[85dvh] flex-col items-center justify-center overflow-hidden px-4 py-20">
+      {/* Subtle background glow */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="bg-accent-purple/10 absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full blur-[120px]" />
+        <div className="bg-accent-teal/10 absolute right-1/4 bottom-1/4 h-[400px] w-[400px] rounded-full blur-[100px]" />
+      </div>
 
-			{/* Main headline */}
-			<motion.h1
-				className='text-4xl md:text-6xl lg:text-7xl font-bold text-center mb-6 relative z-10 font-[family-name:var(--font-space-grotesk)]'
-				initial={{ opacity: 0, y: 30 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, ease: "easeOut" }}
-			>
-				<span className='text-gradient'>Welcome to $CEO</span>
-			</motion.h1>
+      {/* Main headline */}
+      <motion.h1
+        className="relative z-10 mb-6 text-center font-[family-name:var(--font-space-grotesk)] text-4xl font-bold md:text-6xl lg:text-7xl"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <span className="text-gradient">Welcome to $CEO</span>
+      </motion.h1>
 
-			<motion.p
-				className='text-xl md:text-2xl text-center text-foreground/80 mb-2 font-medium tracking-tight'
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay: 0.15 }}
-			>
-				The Infinity CEO you've always wanted
-			</motion.p>
+      <motion.p
+        className="text-foreground/80 mb-2 text-center text-xl font-medium tracking-tight md:text-2xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.15 }}
+      >
+        The Infinity CEO you've always wanted
+      </motion.p>
 
-			<motion.p
-				className='text-base md:text-lg text-muted-foreground text-center max-w-xl mb-12'
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay: 0.3 }}
-			>
-				Powered by GPUs, sweat, and an alarming amount of Mcdonalds employees.
-				<br />
-				<span className='text-foreground/60 italic'>Memetics on Solana, Internet Capital Markets.</span>
-			</motion.p>
+      <motion.p
+        className="text-muted-foreground mb-12 max-w-xl text-center text-base md:text-lg"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        I've created more billionaires on my management team than any CEO in the world.
+        <br />
+        <span className="text-foreground/60 italic">Memetics on Solana, Internet Capital Markets.</span>
+      </motion.p>
 
-			{/* Mascot */}
-			<motion.div
-				className='relative w-56 h-56 md:size-96 mb-12'
-				initial={{ opacity: 0, scale: 0.9 }}
-				animate={{ opacity: 1, scale: 1 }}
-				transition={{ duration: 0.8, delay: 0.4 }}
-			>
-				<motion.div
-					className='relative'
-					animate={{ y: [0, -8, 0] }}
-					transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-				>
-					<div className='absolute inset-0 bg-accent-purple/20 rounded-full blur-2xl scale-110' />
-					<Image
-						src='/ceo/CEO.jpg'
-						alt='$CEO Mascot'
-						width={500}
-						height={288}
-						className='relative z-10 drop-shadow-2xl'
-					/>
-				</motion.div>
-			</motion.div>
+      {/* Mascot */}
+      <motion.div
+        className="relative mb-12 h-56 w-56 md:size-96"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+      >
+        <motion.div
+          className="relative"
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: 'easeInOut' }}
+        >
+          <div className="bg-accent-purple/20 absolute inset-0 scale-110 rounded-full blur-2xl" />
+          <Image
+            src="/ceo/CEO.jpg"
+            alt="$CEO Mascot"
+            width={500}
+            height={288}
+            className="relative z-10 drop-shadow-2xl"
+          />
+        </motion.div>
+      </motion.div>
 
-			{/* CTA Buttons */}
-			<motion.div
-				className='flex flex-wrap gap-4 justify-center'
-				initial={{ opacity: 0, y: 20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.8, delay: 0.6 }}
-			>
-				<motion.button
-					className='px-8 py-3.5 bg-gradient-to-r from-accent-purple to-accent-teal text-white font-semibold text-base rounded-xl glow-subtle'
-					whileHover={{ scale: 1.03, y: -2 }}
-					whileTap={{ scale: 0.98 }}
-					transition={{ type: "spring", stiffness: 400, damping: 17 }}
-				>
-					Buy $CEO
-				</motion.button>
+      {/* CTA Buttons */}
+      <motion.div
+        className="flex flex-wrap justify-center gap-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
+        <motion.button
+          className="from-accent-purple to-accent-teal glow-subtle rounded-xl bg-gradient-to-r px-8 py-3.5 text-base font-semibold text-white"
+          whileHover={{ scale: 1.03, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        >
+          Buy $CEO
+        </motion.button>
 
-				<motion.button
-					className='px-8 py-3.5 border border-border bg-card/50 text-foreground font-semibold text-base rounded-xl hover:border-accent-purple/50 hover:bg-card transition-colors'
-					whileHover={{ scale: 1.03, y: -2 }}
-					whileTap={{ scale: 0.98 }}
-					transition={{ type: "spring", stiffness: 400, damping: 17 }}
-				>
-					Join Community
-				</motion.button>
-			</motion.div>
-		</section>
-	);
+        <motion.button
+          className="border-border bg-card/50 text-foreground hover:border-accent-purple/50 hover:bg-card rounded-xl border px-8 py-3.5 text-base font-semibold transition-colors"
+          whileHover={{ scale: 1.03, y: -2 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        >
+          Join Community
+        </motion.button>
+      </motion.div>
+    </section>
+  );
 }

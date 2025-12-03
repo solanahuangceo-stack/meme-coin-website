@@ -39,9 +39,9 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="text-sm text-muted-foreground mb-2">{new Date().getFullYear()} $CEO. All rights reserved (lol not really).</p>
+        <p className="text-sm text-muted-foreground mb-2">{new Date().getFullYear()} $CEO. All rights reserved.</p>
 
-        <p className="text-xs text-muted-foreground/60">Made with questionable financial decisions</p>
+        <p className="text-xs text-muted-foreground/60">Welcome to the management team</p>
       </div>
     </footer>
   )

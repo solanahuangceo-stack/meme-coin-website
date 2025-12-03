@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const marqueeText = "TO THE MOON • WAGMI • INTERNET MAGIC MONEY • BASED COMMUNITY • PREMIUM DEGEN • ";
+const marqueeText = "STONKS • GRILL DADDY • CEO JONG UN • CEO ZADDY TRUMP • BONK • CEO WAIFU • CEO KAWAI •  CEO GRILL •";
 
 export default function Marquee() {
 	return (
