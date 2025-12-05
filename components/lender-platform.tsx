@@ -8,7 +8,6 @@ interface LenderPlatformProps {
   platform: Platform;
 }
 export default function LenderPlatform({ index, viewMode, platform }: LenderPlatformProps) {
-  const disabled = true;
   return (
     <Link
       href={platform.url as string}
@@ -17,7 +16,7 @@ export default function LenderPlatform({ index, viewMode, platform }: LenderPlat
       key={index}
       className="group relative cursor-pointer overflow-hidden rounded-2xl border-2 border-purple-500/30 bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-none transition-all duration-300 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20"
     >
-      {disabled && (
+      {platform.disabled && (
         <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/50 text-center text-sm font-medium text-white opacity-0 backdrop-blur-sm transition-all duration-300 group-hover:opacity-100">
           <p className="text-xl">Coming Soon!</p>
         </div>

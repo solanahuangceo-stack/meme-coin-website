@@ -9,36 +9,69 @@ export type Platform = {
   category: 'DEFI' | 'CEX' | 'NFT';
   img: string;
   url?: string;
+  disabled?: boolean;
 };
 
 const platforms: Platform[] = [
-  { name: 'DEXSCREENER', category: 'DEFI', img: '/platforms/dexscreener.webp', url: 'https://dexscreener.com/' },
-  { name: 'DEXTOOLS', category: 'DEFI', img: '/platforms/dextools.webp', url: 'https://www.dextools.io/' },
-  { name: 'BIRDEYE', category: 'DEFI', img: '/platforms/birdeye.webp', url: 'https://birdeye.so/' },
-  { name: 'PUMPFUN', category: 'DEFI', img: '/platforms/pumpfun.webp', url: 'https://pump.fun/' },
-  { name: 'SOLSCAN', category: 'DEFI', img: '/platforms/solscan.webp', url: 'https://solscan.io/' },
-  { name: 'RAYDIUM', category: 'DEFI', img: '/platforms/raydium.webp', url: 'https://raydium.io/' },
+  {
+    name: 'DEXSCREENER',
+    category: 'DEFI',
+    img: '/platforms/dexscreener.webp',
+    url: 'https://dexscreener.com/',
+    disabled: false,
+  },
+  { name: 'BIRDEYE', category: 'DEFI', img: '/platforms/birdeye.webp', url: 'https://birdeye.so/', disabled: false },
+  {
+    name: 'DEXTOOLS',
+    category: 'DEFI',
+    img: '/platforms/dextools.webp',
+    url: 'https://www.dextools.io/',
+    disabled: true,
+  },
+  { name: 'PUMPFUN', category: 'DEFI', img: '/platforms/pumpfun.webp', url: 'https://pump.fun/', disabled: true },
+  { name: 'SOLSCAN', category: 'DEFI', img: '/platforms/solscan.webp', url: 'https://solscan.io/', disabled: true },
+  { name: 'RAYDIUM', category: 'DEFI', img: '/platforms/raydium.webp', url: 'https://raydium.io/', disabled: true },
   {
     name: 'GECKOTERMINAL',
     category: 'DEFI',
     img: '/platforms/geckoterminal.webp',
     url: 'https://www.geckoterminal.com/',
+    disabled: true,
   },
-  { name: 'COINGECKO', category: 'DEFI', img: '/platforms/coingecko.webp', url: 'https://www.coingecko.com/' },
-  { name: 'OKX DEX', category: 'DEFI', img: '/platforms/okxdex.webp', url: 'https://www.web3.okx.com/' },
-  { name: 'GMGN', category: 'DEFI', img: '/platforms/gmgn.webp', url: 'https://gmgn.ai/' },
+  {
+    name: 'COINGECKO',
+    category: 'DEFI',
+    img: '/platforms/coingecko.webp',
+    url: 'https://www.coingecko.com/',
+    disabled: true,
+  },
+  {
+    name: 'OKX DEX',
+    category: 'DEFI',
+    img: '/platforms/okxdex.webp',
+    url: 'https://www.web3.okx.com/',
+    disabled: true,
+  },
+  { name: 'GMGN', category: 'DEFI', img: '/platforms/gmgn.webp', url: 'https://gmgn.ai/', disabled: true },
   {
     name: 'COINMARKETCAP',
     category: 'DEFI',
     img: '/platforms/coinmarketcap.webp',
     url: 'https://dex.coinmarketcap.com/',
+    disabled: true,
   },
-  { name: 'MEXC DEX', category: 'DEFI', img: '/platforms/mexcdex.webp', url: 'https://www.mexc.com/dex/' },
-  { name: 'KCEX', category: 'CEX', img: '/platforms/kcex.webp', url: 'https://www.kcex.com/' },
-  { name: 'BITRUE', category: 'CEX', img: '/platforms/bitrue.webp', url: 'https://www.bitrue.com/' },
-  { name: 'WEEX', category: 'CEX', img: '/platforms/weex.webp', url: 'https://www.weex.com/' },
-  { name: 'MEXC', category: 'CEX', img: '/platforms/mexc.webp', url: 'https://www.mexc.com/' },
-  { name: 'GROVEX', category: 'CEX', img: '/platforms/grovex.webp', url: 'https://www.grovex.io/' },
+  {
+    name: 'MEXC DEX',
+    category: 'DEFI',
+    img: '/platforms/mexcdex.webp',
+    url: 'https://www.mexc.com/dex/',
+    disabled: true,
+  },
+  { name: 'KCEX', category: 'CEX', img: '/platforms/kcex.webp', url: 'https://www.kcex.com/', disabled: true },
+  { name: 'BITRUE', category: 'CEX', img: '/platforms/bitrue.webp', url: 'https://www.bitrue.com/', disabled: true },
+  { name: 'WEEX', category: 'CEX', img: '/platforms/weex.webp', url: 'https://www.weex.com/', disabled: true },
+  { name: 'MEXC', category: 'CEX', img: '/platforms/mexc.webp', url: 'https://www.mexc.com/', disabled: true },
+  { name: 'GROVEX', category: 'CEX', img: '/platforms/grovex.webp', url: 'https://www.grovex.io/', disabled: true },
 ];
 
 export default function CryptoPlatforms() {
