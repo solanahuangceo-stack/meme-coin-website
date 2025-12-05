@@ -10,7 +10,7 @@ export default function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const ADDRESS = '1234';
+  const ADDRESS = 'NEWCAADDRESSHERE!!';
   
   return (
     <section ref={ref} className="relative px-4 py-24">
