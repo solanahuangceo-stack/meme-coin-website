@@ -2,6 +2,7 @@ import type React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import './globals.css';
 import { Toaster } from 'sonner';
 
@@ -18,7 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: '$CEO — Huangonsol Token',
   description: "Welcome to $CEO. The Infinity CEO you've always wanted",
-  
+
   icons: {
     icon: [
       {
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}>
         {children}
         <Analytics />
+        <SpeedInsights />
         <Toaster />
       </body>
     </html>
