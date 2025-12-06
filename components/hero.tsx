@@ -88,7 +88,7 @@ export default function Hero() {
         </motion.button>
 
         <motion.a
-          href="https://t.me/solanasCE0"
+          href="https://t.me/solanasceo"
           target="_blank"
           rel="noopener noreferrer"
           className="border-border bg-card/50 text-foreground hover:border-accent-purple/50 hover:bg-card relative rounded-xl border px-8 py-3.5 text-base font-semibold transition-colors"
