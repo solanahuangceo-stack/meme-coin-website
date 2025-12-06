@@ -6,7 +6,7 @@ import { Telegram } from './socials/telegram';
 
 const socialLinks = [
   { name: 'https://x.com/solanasceo', icon: <X width={24} /> },
-  { name: 'https://t.me/solanasCE0', icon: <Telegram width={24} /> },
+  { name: 'https://t.me/solanasceo', icon: <Telegram width={24} /> },
 ];
 
 export default function Footer() {
